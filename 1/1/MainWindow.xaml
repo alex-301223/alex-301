@@ -21,18 +21,16 @@
         <Button Content="Об авторе" HorizontalAlignment="Left" Margin="26,532,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_8"/>
 
         <Menu Height="25" VerticalAlignment="Top" Background="blue" Grid.ColumnSpan="4" Margin="0,0,-0.4,0">
-            <MenuItem Header="Задачи" >
+            <MenuItem Header="Задачи" Click="MenuItem_Click_1" >
                 <MenuItem Header="Построить гистограмму"  Margin="3,0,-3,0" Click="MenuItem_Click" ></MenuItem>
-                <MenuItem Header="Построить гистограмму"  Margin="3,0,-3,0" Click="MenuItem_Click" ></MenuItem>
-                <MenuItem Header="Построить гистограмму"  Margin="3,0,-3,0" Click="MenuItem_Click" ></MenuItem>
+                <MenuItem Header="Математическое ожидание"  Margin="3,0,-3,0" Click="MenuItem_Click_1" ></MenuItem>
+                <MenuItem Header="Соседние элементы(кольцевой массив)"  Margin="3,0,-3,0" Click="MenuItem_Click_2" ></MenuItem>
             </MenuItem>
 
            
 
         </Menu>
-         <!--
-        Об авторе ооооо
-        -->
+        
 
     </Grid>
 </Window>

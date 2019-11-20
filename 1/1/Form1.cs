@@ -36,7 +36,7 @@ namespace _1
 
 
         private void DrawHistogram(Graphics gr, Color back_color,
-        int[] values, int width, int height)
+int[] values, int width, int height)
         {
             Color[] Colors = new Color[] {
 Color.Red, Color.LightGreen, Color.Blue,
@@ -87,6 +87,11 @@ new PointF(0, 0)
 
             gr.ResetTransform();
             gr.DrawRectangle(Pens.Black, 0, 0, width - 1, height - 1);
+        }
+
+        private void PicHisto_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

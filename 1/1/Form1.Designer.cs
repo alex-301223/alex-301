@@ -41,6 +41,7 @@
             this.picHisto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHisto.TabIndex = 0;
             this.picHisto.TabStop = false;
+            this.picHisto.Click += new System.EventHandler(this.PicHisto_Click);
             this.picHisto.Paint += new System.Windows.Forms.PaintEventHandler(this.PicHisto_Paint);
             this.picHisto.Resize += new System.EventHandler(this.PicHisto_Resize);
             // 
