@@ -38,7 +38,7 @@ namespace _1
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -52,7 +52,7 @@ namespace _1
             }
             catch
             {
-                
+
                 itemCount = 0;
             }
             if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
@@ -90,7 +90,7 @@ namespace _1
             }
             catch
             {
-                
+
                 itemCount = 0;
             }
             if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
@@ -107,10 +107,10 @@ namespace _1
                     lbMain.Items.Add(number);
                     f1.val[index] = number;
                 }
-            
-            int[] a = (int[])myAL.ToArray(typeof(int));
+
+                int[] a = (int[])myAL.ToArray(typeof(int));
                 int kol = 0;
-                for(int i=1;i< itemCount-1; i++)
+                for (int i = 1; i < itemCount - 1; i++)
                 {
                     if ((a[i] > a[i - 1]) && (a[i] > a[i + 1]))
                         kol++;
@@ -132,7 +132,7 @@ namespace _1
             }
             catch
             {
-              
+
                 itemCount = 0;
             }
             if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
@@ -151,8 +151,8 @@ namespace _1
                 }
 
                 int[] a = (int[])myAL.ToArray(typeof(int));
-                int k=-1;
-                for(int i=0;i<itemCount;i++)
+                int k = -1;
+                for (int i = 0; i < itemCount; i++)
                 {
                     if (a[i] > 25)
                     {
@@ -165,7 +165,7 @@ namespace _1
                 else
                 {
                     lbMain.Items.Add("Номер первого элемента, значение которого больше чем 25");
-                    lbMain.Items.Add(k+1);
+                    lbMain.Items.Add(k + 1);
                 }
             }
         }
@@ -181,7 +181,7 @@ namespace _1
             }
             catch
             {
-                
+
                 itemCount = 0;
             }
             if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
@@ -202,12 +202,12 @@ namespace _1
 
                 MessageBox.Show("Сейчас появится новое окно, в котором вам необходимо ввести число к, где к является целым числом, с которым вы хотите сравнить значение элементов массива, и найти первый, который больше чем к");
                 Properties.Window1 w = new Properties.Window1();
-            w.ShowDialog();
-            int k=0;
-            if ((w.flag == 0)||(w.flag==-1)) MessageBox.Show("K не было введено. Операция отменена");
-            else
-            {
-                k = w.n;
+                w.ShowDialog();
+                int k = 0;
+                if ((w.flag == 0) || (w.flag == -1)) MessageBox.Show("K не было введено. Операция отменена");
+                else
+                {
+                    k = w.n;
                     lbMain.Items.Add("Введенное число к:");
                     lbMain.Items.Add(k);
 
@@ -231,7 +231,7 @@ namespace _1
                     else
                     {
                         lbMain.Items.Add("Номер первого элемента, значение которого больше чем  к");
-                        lbMain.Items.Add(t+1);
+                        lbMain.Items.Add(t + 1);
                     }
 
 
@@ -250,7 +250,7 @@ namespace _1
             }
             catch
             {
-               
+
                 itemCount = 0;
             }
             if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
@@ -271,17 +271,17 @@ namespace _1
 
                 MessageBox.Show("Сейчас появится новое окно, в котором вам необходимо ввести число к, где к индексом элемента массива, с которым вы хотите сравнить значение элементов массива, и найти сумму элементов, которые больше чем к-ый элемента массива");
                 Properties.Window1 w = new Properties.Window1();
-            w.ShowDialog();
-            int k = 0;
-            if ((w.flag == 0) || (w.flag == -1)) MessageBox.Show("K не было введено. Операция отменена");
-            
-            else
-            {
-                k = w.n;
+                w.ShowDialog();
+                int k = 0;
+                if ((w.flag == 0) || (w.flag == -1)) MessageBox.Show("K не было введено. Операция отменена");
+
+                else
+                {
+                    k = w.n;
                     lbMain.Items.Add("Введенное число к:");
                     lbMain.Items.Add(k);
 
-                    if (k<0) MessageBox.Show("Введено отрицательное число, индекс не может быть отрицательным");
+                    if (k < 0) MessageBox.Show("Введено отрицательное число, индекс не может быть отрицательным");
                     else if (k > itemCount) MessageBox.Show("Такого элемента с индексом к не существует");
 
                     else
@@ -291,7 +291,7 @@ namespace _1
                         int[] a = (int[])myAL.ToArray(typeof(int));
                         int m = a[k];
                         int t = 0;
-                        for (int i = 0; i < itemCount ; i++)
+                        for (int i = 0; i < itemCount; i++)
                         {
                             if (a[i] > m)
 
@@ -339,7 +339,7 @@ namespace _1
                     lbMain.Items.Add(number);
                     f1.val[index] = number;
                 }
-               
+
                 int[] a = (int[])myAL.ToArray(typeof(int));
                 int k = 0;
                 for (int i = 0; i < itemCount; i++)
@@ -360,8 +360,8 @@ namespace _1
             }
         }
 
-        
-       
+
+
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
@@ -381,18 +381,18 @@ namespace _1
             }
         }
 
-        
 
-        
 
-        
+
+
+
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
             f1.Show();
         }
 
-        
+
 
         private void Button_Click_11(object sender, RoutedEventArgs e)
         {
@@ -638,7 +638,214 @@ namespace _1
                 }
             }
         }
+
+        private void Button_Click_15(object sender, RoutedEventArgs e)
+        {
+            ArrayList myAL = new ArrayList();
+            int index;
+            int itemCount;
+            try
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+            }
+            catch
+            {
+
+                itemCount = 0;
+            }
+            if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
+            else
+            {
+                Random rnd1 = new Random();
+                int number;
+                lbMain.Items.Clear();
+
+                for (index = 0; index < itemCount; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+
+                }
+                int[] a = (int[])myAL.ToArray(typeof(int));
+                float kol = 0;
+                for (int i = 0; i < itemCount; i++)
+                {
+                    kol = kol + (float)a[i];
+                }
+                kol = kol / itemCount;
+                lbMain.Items.Add("Математическое ожидание для сгенерированных элементов");
+                lbMain.Items.Add(kol);
+                float n = 0;
+                float k;
+                for (index = 0; index < itemCount; index++)
+                {
+                    k = kol - (float)a[index];
+                    if (n < Math.Abs(k)) n = Math.Abs(k);
+
+
+                }
+                lbMain.Items.Add("Макс отклонение");
+                lbMain.Items.Add(n);
+                for (index = 0; index < itemCount; index++)
+                {
+                    k = (float)a[index] - kol;
+                    if (Math.Abs(k) > n / 2) lbMain.Items.Add(Math.Abs(kol));
+                    else lbMain.Items.Add(a[index]);
+                }
+            }
+        }
+
+        private void Button_Click_16(object sender, RoutedEventArgs e)
+        {
+            int itemCount;
+            try { itemCount = Convert.ToInt32(tbN.Text); }
+
+
+            catch { itemCount = 0; }
+            if (itemCount <= 0) MessageBox.Show("Введите целое положительное число");
+            else
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+
+                //if (itemCount <= 0) MessageBox.Show("Количество должно быть положительным"); 
+                ArrayList myAL = new ArrayList();
+                int index;
+                //int itemCount = Convert.ToInt32(tbN.Text); 
+                Random rnd1 = new Random();
+                int number;
+
+
+                lbMain.Items.Clear();
+                f1.val = new int[itemCount];
+                for (index = 0; index <= itemCount - 1; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+                    f1.val[index] = number;
+                }
+                float m = 0;
+                ArrayList vesh = new ArrayList();
+                int[] ar = (int[])myAL.ToArray(typeof(int));
+                for (int i = 0; i < ar.Length; i++)
+                {
+
+                    m = m + ar[i];
+
+                }
+                m = m / itemCount;
+                lbMain.Items.Add("Математическое ожидание:");
+                lbMain.Items.Add(m);
+                float s = 0; float max = 0;
+
+                for (int i = 0; i < ar.Length; i++)
+                {
+
+
+                    max = ar[i] - m;
+                    Math.Abs(max);
+                    if (max > s) { s = max; }
+
+                }
+                float x;
+                s = s / 2;
+                lbMain.Items.Add("Максимальное отклонение:");
+                lbMain.Items.Add(s);
+                lbMain.Items.Add(" ");
+                lbMain.Items.Add("Измененный массив:");
+                float k;
+                for (int i = 0; i < ar.Length; i++)
+                {
+
+
+                    k = ar[i] - m;
+                    Math.Abs(k);
+                    if (Math.Abs(k) > s) { x = m / k; myAL.Add(ar[i] - x); lbMain.Items.Add(ar[i] - x); } // мат делим на к, потом получ значвыч из элем. 
+                    else { myAL.Add(ar[i]); lbMain.Items.Add(ar[i]); }
+
+
+
+                }
+            }
+        }
+
+        private void Button_Click_17(object sender, RoutedEventArgs e)
+        {
+            int itemCount;
+            try { itemCount = Convert.ToInt32(tbN.Text); }
+
+
+            catch { itemCount = 0; }
+            if (itemCount <= 0) MessageBox.Show("Введите целое положительное число");
+            else
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+
+                //if (itemCount <= 0) MessageBox.Show("Количество должно быть положительным"); 
+                ArrayList myAL = new ArrayList();
+                int index;
+                //int itemCount = Convert.ToInt32(tbN.Text); 
+                Random rnd1 = new Random();
+                int number;
+
+
+                lbMain.Items.Clear();
+                f1.val = new int[itemCount];
+                for (index = 0; index <= itemCount - 1; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+                    f1.val[index] = number;
+                }
+                float m = 0;
+                ArrayList vesh = new ArrayList();
+                int[] ar = (int[])myAL.ToArray(typeof(int));
+                for (int i = 0; i < ar.Length; i++)
+                {
+
+                    m = m + ar[i];
+
+                }
+                m = m / itemCount;
+                lbMain.Items.Add("Математическое ожидание:");
+                lbMain.Items.Add(m);
+                float s = 0; float max = 0;
+
+                for (int i = 0; i < ar.Length; i++)
+                {
+
+
+                    max = ar[i] - m;
+                    Math.Abs(max);
+                    if (max > s) { s = max; }
+
+                }
+                float x;
+                s = s / 2;
+                lbMain.Items.Add("Максимальное отклонение:");
+                lbMain.Items.Add(s);
+                lbMain.Items.Add(" ");
+                lbMain.Items.Add("Измененный массив:");
+                float k;
+                for (int i = 0; i < ar.Length; i++)
+                {
+
+
+                    k = ar[i] - m;
+                    Math.Abs(k);
+                    if (Math.Abs(k) > s) { x = m / k; myAL.Add(ar[i] + x); lbMain.Items.Add(ar[i] + x); } // мат делим на к, потом получ значвыч из элем. 
+                    else { myAL.Add(ar[i]); lbMain.Items.Add(ar[i]); }
+
+
+
+                }
+            }
+        }
+
     }
 }
+
 
           
