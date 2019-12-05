@@ -26,17 +26,13 @@
 
         
         <Button Content="Гистограмма" HorizontalAlignment="Left" Margin="232,57,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_7"/>
-        <Button Content="№1" HorizontalAlignment="Left" Margin="232,105,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_10"/>
-        <Button Content="№2" HorizontalAlignment="Left" Margin="232,162,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_11"/>
-        <Button Content="№3" HorizontalAlignment="Left" Margin="232,211,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="№4" HorizontalAlignment="Left" Margin="232,259,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="№5" HorizontalAlignment="Left" Margin="232,304,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="№6" HorizontalAlignment="Left" Margin="232,355,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="№7" HorizontalAlignment="Left" Margin="232,405,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="№8" HorizontalAlignment="Left" Margin="232,453,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="№9" HorizontalAlignment="Left" Margin="232,490,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="№10" HorizontalAlignment="Left" Margin="232,532,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="№16" HorizontalAlignment="Left" Margin="360,532,0,0" VerticalAlignment="Top" Width="75"/>
+        
+        <Button Content="№2" HorizontalAlignment="Left" Margin="232,105,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_11"/>
+        <Button Content="№3" HorizontalAlignment="Left" Margin="232,147,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_12"/>
+        <Button Content="№4" HorizontalAlignment="Left" Margin="232,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_10"/>
+        <Button Content="№5" HorizontalAlignment="Left" Margin="232,239,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_13"/>
+        <Button Content="№6" HorizontalAlignment="Left" Margin="232,289,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_14"/>
+        
 
 
     </Grid>

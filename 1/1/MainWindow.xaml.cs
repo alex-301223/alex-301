@@ -392,7 +392,57 @@ namespace _1
             f1.Show();
         }
 
-        private void Button_Click_10(object sender, RoutedEventArgs e)
+        
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+
+            ArrayList myAL = new ArrayList();
+            int index;
+            int itemCount;
+            try
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+            }
+            catch
+            {
+
+                itemCount = 0;
+            }
+            if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
+            else
+            {
+                Random rnd1 = new Random();
+                int number;
+                lbMain.Items.Clear();
+                f1.val = new int[itemCount];
+                for (index = 0; index < itemCount; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+                    f1.val[index] = number;
+                }
+
+                int[] a = (int[])myAL.ToArray(typeof(int));
+                int kol = 0;
+                for (int i = 1; i < itemCount - 1; i++)
+                {
+                    if ((a[i] > a[i - 1]) && (a[i] > a[i + 1]))
+                        kol++;
+                }
+                if ((a[0] > a[itemCount - 1]) && (a[0] > a[1]))
+                    kol++;
+                if ((a[itemCount - 1] > a[0]) && (a[itemCount - 1] > a[itemCount - 2]))
+                    kol++;
+
+                lbMain.Items.Add("Количество элементов, которые больше своих соседей");
+                lbMain.Items.Add(kol);
+
+            }
+        }
+
+        private void Button_Click_12(object sender, RoutedEventArgs e)
         {
             ArrayList myAL = new ArrayList();
             int index;
@@ -441,9 +491,8 @@ namespace _1
             }
         }
 
-        private void Button_Click_11(object sender, RoutedEventArgs e)
+        private void Button_Click_10(object sender, RoutedEventArgs e)
         {
-
             ArrayList myAL = new ArrayList();
             int index;
             int itemCount;
@@ -475,17 +524,118 @@ namespace _1
                 int kol = 0;
                 for (int i = 1; i < itemCount - 1; i++)
                 {
-                    if ((a[i] > a[i - 1]) && (a[i] > a[i + 1]))
+                    if (((a[i] > a[i - 1]) && (a[i] < a[i + 1])) || ((a[i] < a[i - 1]) && (a[i] > a[i + 1])))
                         kol++;
                 }
-                if ((a[0] > a[itemCount - 1]) && (a[0] > a[1]))
+                if (((a[0] > a[itemCount - 1]) && (a[0] < a[1])) || ((a[0] < a[itemCount - 1]) && (a[0] > a[1])))
                     kol++;
-                if ((a[itemCount - 1] > a[0]) && (a[itemCount - 1] > a[itemCount - 2]))
+                if (((a[itemCount - 1] > a[itemCount - 2]) && (a[itemCount - 1] < a[0])) || ((a[itemCount - 1] < a[itemCount - 2]) && (a[itemCount - 1] > a[0])))
                     kol++;
 
-                lbMain.Items.Add("Количество элементов, которые больше своих соседей");
+
+                lbMain.Items.Add("Количество элементов, которые составляют со своими сосядями составляют упорядоченную последовалтельность ");
                 lbMain.Items.Add(kol);
 
+            }
+        }
+
+        private void Button_Click_13(object sender, RoutedEventArgs e)
+        {
+            ArrayList myAL = new ArrayList();
+            int index;
+            int itemCount;
+            try
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+            }
+            catch
+            {
+
+                itemCount = 0;
+            }
+            if (itemCount <= 0) MessageBox.Show("Введите положительное целое число > 4");
+            else
+            {
+                Random rnd1 = new Random();
+                int number;
+                lbMain.Items.Clear();
+
+                for (index = 0; index < itemCount; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+
+                }
+
+                int[] a = (int[])myAL.ToArray(typeof(int));
+                int kol = 0;
+                for (int i = 2; i < itemCount - 2; i++)
+                {
+                    if (((a[i] > a[i - 1]) && (a[i - 1] > a[i - 2]) && (a[i] < a[i + 1]) && (a[i + 1] < a[i + 2])) || ((a[i] < a[i - 1]) && (a[i - 1] < a[i - 2]) && (a[i] > a[i + 1]) && (a[i + 1] > a[i + 2])))
+                        kol++;
+                }
+                if (((a[0] > a[itemCount - 1]) && (a[itemCount - 1] > a[itemCount - 2]) && (a[0] < a[1]) && (a[1] < a[2])) || ((a[0] < a[itemCount - 1]) && (a[itemCount - 1] < a[itemCount - 2]) && (a[0] > a[1]) && (a[1] > a[2])))
+                    kol++;
+                if (((a[itemCount - 1] > a[itemCount - 2]) && (a[itemCount - 2] > a[itemCount - 3]) && (a[itemCount - 1] < a[0]) && (a[0] < a[1])) || ((a[itemCount - 1] < a[itemCount - 2]) && (a[itemCount - 2] < a[itemCount - 3]) && (a[itemCount - 1] > a[0]) && (a[0] > a[1])))
+                    kol++;
+                if (((a[1] > a[0]) && (a[0] > a[itemCount - 1]) && (a[1] < a[2]) && (a[2] < a[3])) || ((a[1] < a[0]) && (a[0] < a[itemCount - 1]) && (a[1] > a[2]) && (a[2] > a[3])))
+                    kol++;
+                if (((a[itemCount - 2] > a[itemCount - 3]) && (a[itemCount - 3] > a[itemCount - 4]) && (a[itemCount - 2] < a[itemCount - 1]) && (a[itemCount - 1] < a[0])) || ((a[itemCount - 2] < a[itemCount - 3]) && (a[itemCount - 3] < a[itemCount - 4]) && (a[itemCount - 2] > a[itemCount - 1]) && (a[itemCount - 1] > a[0])))
+                    kol++;
+
+
+                lbMain.Items.Add("Количество элементов, которые которые состовляеют упорядоченную последовательносьть с элементами [i-2;i+2] , где i текущий элемент");
+                lbMain.Items.Add(kol);
+
+            }
+        }
+
+        private void Button_Click_14(object sender, RoutedEventArgs e)
+        {
+            ArrayList myAL = new ArrayList();
+            int index;
+            int itemCount;
+            try
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+            }
+            catch
+            {
+
+                itemCount = 0;
+            }
+            if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
+            else
+            {
+                Random rnd1 = new Random();
+                int number;
+                lbMain.Items.Clear();
+
+                for (index = 0; index < itemCount; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+
+                }
+                int[] a = (int[])myAL.ToArray(typeof(int));
+                float kol = 0;
+                for (int i = 0; i < itemCount; i++)
+                {
+                    kol = kol + (float)a[i];
+                }
+                kol = kol / itemCount;
+                lbMain.Items.Add("Математическое ожидание для сгенерированных элементов");
+                lbMain.Items.Add(kol);
+                float n;
+                for (index = 0; index < itemCount; index++)
+                {
+                    n = (float)a[index] - kol;
+
+                    lbMain.Items.Add(Math.Abs(n));
+
+                }
             }
         }
     }
