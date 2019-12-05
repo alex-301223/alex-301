@@ -27,7 +27,7 @@ namespace _1
         {
             InitializeComponent();
         }
-
+        int t, k;
         Form1 f1 = new Form1();
 
 
@@ -38,7 +38,33 @@ namespace _1
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            ArrayList myAL = new ArrayList();
+            int index;
+            int itemCount;
+            try
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+            }
+            catch
+            {
 
+                itemCount = 0;
+            }
+            if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
+            else
+            {
+                Random rnd1 = new Random();
+                int number;
+                lbMain.Items.Clear();
+                f1.val = new int[itemCount];
+                for (index = 0; index < itemCount; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+                    f1.val[index] = number;
+                }
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -559,13 +585,13 @@ namespace _1
                 Random rnd1 = new Random();
                 int number;
                 lbMain.Items.Clear();
-
+                f1.val = new int[itemCount];
                 for (index = 0; index < itemCount; index++)
                 {
                     number = 0 + rnd1.Next(200);
                     myAL.Add(number);
                     lbMain.Items.Add(number);
-
+                    f1.val[index] = number;
                 }
 
                 int[] a = (int[])myAL.ToArray(typeof(int));
@@ -611,13 +637,13 @@ namespace _1
                 Random rnd1 = new Random();
                 int number;
                 lbMain.Items.Clear();
-
+                f1.val = new int[itemCount];
                 for (index = 0; index < itemCount; index++)
                 {
                     number = 0 + rnd1.Next(200);
                     myAL.Add(number);
                     lbMain.Items.Add(number);
-
+                    f1.val[index] = number;
                 }
                 int[] a = (int[])myAL.ToArray(typeof(int));
                 float kol = 0;
@@ -659,13 +685,13 @@ namespace _1
                 Random rnd1 = new Random();
                 int number;
                 lbMain.Items.Clear();
-
+                f1.val = new int[itemCount];
                 for (index = 0; index < itemCount; index++)
                 {
                     number = 0 + rnd1.Next(200);
                     myAL.Add(number);
                     lbMain.Items.Add(number);
-
+                    f1.val[index] = number;
                 }
                 int[] a = (int[])myAL.ToArray(typeof(int));
                 float kol = 0;
@@ -844,6 +870,143 @@ namespace _1
             }
         }
 
+        private void Button_Click_19(object sender, RoutedEventArgs e)
+        {
+            ArrayList myAL = new ArrayList();
+            int index;
+            int itemCount;
+            try
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+            }
+            catch
+            {
+
+                itemCount = 0;
+            }
+            if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
+            else
+            {
+                Random rnd1 = new Random();
+                int number;
+                lbMain.Items.Clear();
+                f1.val = new int[itemCount];
+                int c = 0;
+                for (index = 0; index < itemCount; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    c = c + number;
+                    myAL.Add(c);
+                    lbMain.Items.Add(c);
+                    f1.val[index] = c;
+                }
+            }
+        }
+
+        private void Button_Click_18(object sender, RoutedEventArgs e)
+        {
+
+            int itemCount;
+            try { itemCount = Convert.ToInt32(tbN.Text); }
+
+
+            catch { itemCount = 0; }
+            if (itemCount <= 0) MessageBox.Show("Введите целое положительное число");
+            else
+            {
+                itemCount = Convert.ToInt32(tbN.Text);
+
+                //if (itemCount <= 0) MessageBox.Show("Количество должно быть положительным"); 
+                ArrayList myAL = new ArrayList();
+                int index;
+                //int itemCount = Convert.ToInt32(tbN.Text); 
+                Random rnd1 = new Random();
+                int number;
+
+
+                lbMain.Items.Clear();
+
+                for (index = 0; index <= itemCount - 1; index++)
+                {
+                    number = 0 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+
+                }
+                float m = 0;
+                ArrayList vesh = new ArrayList();
+                int[] ar = (int[])myAL.ToArray(typeof(int));
+                for (int i = 0; i < ar.Length; i++)
+                {
+
+                    m = m + ar[i];
+
+                }
+                m = m / itemCount;
+                lbMain.Items.Add("Математическое ожидание:");
+                lbMain.Items.Add(m);
+
+                Properties.Window1 w = new Properties.Window1();
+                w.ShowDialog();
+                if (w.flag == 1)
+                {
+                    t = Convert.ToInt32(w.T1.Text); //w.textBox1.Text; 
+                                                          //if (w.fl_1 == 0) L.Content = "Отменено"; 
+
+                }
+
+                int s = ar.Length;
+
+                for (int j = 0; j < t; j++)
+                {
+                    lbMain.Items.Add("Массив после итерации");
+
+                    Properties.Window1 r = new Properties.Window1();
+                    r.ShowDialog();
+
+
+                    k = Convert.ToInt32(r.T1.Text); //w.textBox1.Text; 
+                                                          //if (w.fl_1 == 0) L.Content = "Отменено"; 
+
+                    float p;
+                    for (int i = 0; i < s; i++)
+                    {
+                        float y;
+                        y = ar[i] - m;
+                        p = Math.Abs(y);
+                        if ((float)k < p)
+                        {
+
+                            for (int c = i; c < s - 1; c++)
+                            {
+                                ar[c] = ar[c + 1];
+
+                            }
+                            s = s - 1;
+
+                            lbMain.Items.Add(ar[i]);
+
+
+
+
+                        }
+                        else
+                        {
+
+                            lbMain.Items.Add(ar[i]);
+
+
+                        };
+
+
+
+                    }
+
+
+                }
+
+            }
+        }
     }
 }
 
