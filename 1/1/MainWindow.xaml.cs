@@ -38,33 +38,7 @@ namespace _1
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ArrayList myAL = new ArrayList();
-            int index;
-            int itemCount ;
-            try
-            {
-                itemCount = Convert.ToInt32(tbN.Text);
-            }
-            catch
-            {
-                
-                itemCount = 0;
-            }
-            if (itemCount <= 0) MessageBox.Show("Введите положительное целое число");
-            else
-            {
-                Random rnd1 = new Random();
-                int number;
-                lbMain.Items.Clear();
-                f1.val = new int[itemCount];
-                for (index = 0; index < itemCount; index++)
-                {
-                    number = 0 + rnd1.Next(200);
-                    myAL.Add(number);
-                    lbMain.Items.Add(number);
-                    f1.val[index] = number;
-                }
-            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -407,17 +381,22 @@ namespace _1
             }
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        
+
+        
+
+        
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
         {
             f1.Show();
         }
 
-        
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_10(object sender, RoutedEventArgs e)
         {
             ArrayList myAL = new ArrayList();
             int index;
+            int i;
             int itemCount;
             try
             {
@@ -444,18 +423,27 @@ namespace _1
                 }
                 int[] a = (int[])myAL.ToArray(typeof(int));
                 float kol = 0;
-                for (int i=0;i<itemCount;i++)
+                for (i = 0; i < itemCount; i++)
                 {
                     kol = kol + (float)a[i];
                 }
                 kol = kol / itemCount;
                 lbMain.Items.Add("Математическое ожидание для сгенерированных элементов");
                 lbMain.Items.Add(kol);
+                i = 0;
+                int b = 0;
+                while ((b != 0) && (i < itemCount))
+                {
+                    if (a[i] > kol) b = i;
+                }
+                lbMain.Items.Add("Новер первого элемента, который больше чем математическое ожидание для сгенерированных элементов");
+                lbMain.Items.Add(b + 1);
             }
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void Button_Click_11(object sender, RoutedEventArgs e)
         {
+
             ArrayList myAL = new ArrayList();
             int index;
             int itemCount;
@@ -485,7 +473,7 @@ namespace _1
 
                 int[] a = (int[])myAL.ToArray(typeof(int));
                 int kol = 0;
-                for (int i = 1; i < itemCount-1 ; i++)
+                for (int i = 1; i < itemCount - 1; i++)
                 {
                     if ((a[i] > a[i - 1]) && (a[i] > a[i + 1]))
                         kol++;
@@ -503,25 +491,4 @@ namespace _1
     }
 }
 
-          /*  {
-                Random rnd1 = new Random();
-int number;
-lbMain.Items.Clear();
-                for (index = 1; index <= itemCount; index++)
-                {
-                    number = -100 + rnd1.Next(200);
-                    myAL.Add(number);
-                    lbMain.Items.Add(number);
-                }
-            
-            int[] a = (int[])myAL.ToArray(typeof(int));
-int kol = 0;
-                for(int i=1;i<itemCount-1; i++)
-                {
-                    if ((a[i] > a[i - 1]) && (a[i] > a[i + 1]))
-                        kol++;
-                }
-                lbMain.Items.Add("Количество элементов, которые больше своих соседей");
-                lbMain.Items.Add(kol);
-
-            }*/
+          

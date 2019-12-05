@@ -8,7 +8,7 @@ using System.Windows;
 // набор атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("1")]
-[assembly: AssemblyDescription("Лабороторная работа №3")]
+[assembly: AssemblyDescription("Лабороторная работа №1")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ТГПУ им. Л.Н.Толстого")]
 [assembly: AssemblyProduct("1")]
@@ -51,5 +51,5 @@ using System.Windows;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

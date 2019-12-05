@@ -20,17 +20,24 @@
         <Button Content="Сохранить" HorizontalAlignment="Left" Margin="26,254,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_9"/>
         <Button Content="Об авторе" HorizontalAlignment="Left" Margin="26,532,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_8"/>
 
-        <Menu Height="25" VerticalAlignment="Top" Background="blue" Grid.ColumnSpan="4" Margin="0,0,-0.4,0">
-            <MenuItem Header="Задачи" Click="MenuItem_Click_1" >
-                <MenuItem Header="Построить гистограмму"  Margin="3,0,-3,0" Click="MenuItem_Click" ></MenuItem>
-                <MenuItem Header="Математическое ожидание"  Margin="3,0,-3,0" Click="MenuItem_Click_1" ></MenuItem>
-                <MenuItem Header="Соседние элементы(кольцевой массив)"  Margin="3,0,-3,0" Click="MenuItem_Click_2" ></MenuItem>
-            </MenuItem>
+        
 
            
 
-        </Menu>
         
+        <Button Content="Гистограмма" HorizontalAlignment="Left" Margin="232,57,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_7"/>
+        <Button Content="№1" HorizontalAlignment="Left" Margin="232,105,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_10"/>
+        <Button Content="№2" HorizontalAlignment="Left" Margin="232,162,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_11"/>
+        <Button Content="№3" HorizontalAlignment="Left" Margin="232,211,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="№4" HorizontalAlignment="Left" Margin="232,259,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="№5" HorizontalAlignment="Left" Margin="232,304,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="№6" HorizontalAlignment="Left" Margin="232,355,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="№7" HorizontalAlignment="Left" Margin="232,405,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="№8" HorizontalAlignment="Left" Margin="232,453,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="№9" HorizontalAlignment="Left" Margin="232,490,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="№10" HorizontalAlignment="Left" Margin="232,532,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="№16" HorizontalAlignment="Left" Margin="360,532,0,0" VerticalAlignment="Top" Width="75"/>
+
 
     </Grid>
 </Window>
